@@ -20,7 +20,6 @@ public class ExceptionExamples {
             fileInput.read();  // Attempt to read from the closed stream
         } catch (IOException e) {
             System.out.println("IOException caught: " + e.getMessage());
-            System.out.println("Tip: Ensure the file stream is open before reading.");
         }
     }
 
@@ -30,7 +29,6 @@ public class ExceptionExamples {
             FileInputStream fileInput = new FileInputStream("nonexistent_file.txt");
         } catch (FileNotFoundException e) {
             System.out.println("FileNotFoundException caught: " + e.getMessage());
-            System.out.println("Tip: Check the file path and ensure the file exists.");
         }
     }
 
@@ -57,7 +55,6 @@ public class ExceptionExamples {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/nonexistent_db", "user", "password");
         } catch (SQLException e) {
             System.out.println("SQLException caught: " + e.getMessage());
-            System.out.println("Tip: Verify database credentials and the database existence.");
         }
     }
 
@@ -68,7 +65,6 @@ public class ExceptionExamples {
             Class.forName("com.nonexistent.ClassName");
         } catch (ClassNotFoundException e) {
             System.out.println("ClassNotFoundException caught: " + e.getMessage());
-            System.out.println("Tip: Ensure the class name is correct and in the classpath.");
         }
     }
 }
